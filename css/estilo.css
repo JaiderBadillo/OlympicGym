@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2? family= Nunito:wght@800 & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Roboto+Slab:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+/* CSS UNIVERSAL PARA TODA LA PAGINA */
+*{
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  font-family: serif;
+  font-size: 20px;
+}
+
+/* AQUI EMPIEZA LA SECCION DE ENCABEZADO ------------------------------------------------------------------------------------------------------------------------------ */
+/* ENCABEZADO DE LA PAGINA Y SUS CARACTERISTICAS */
+
+.header{
+  background-color: rgb(37, 36, 36);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 85px;
+  padding: 48px 10%;
+}
+/* LOGO */
+.header .logo  img {
+  height: 160px;
+  width: auto;
+  transition: all 0.3s;
+}
+/* NOMBRE DE LA PAGINA WEB OLYMPIAGYM */
+.tlogo {
+  width: 350px;
+  color: rgb(245, 245, 245);
+  height: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 900;
+ 
+  
+}
+/* ANIMACION DEL LOGO */
+.tlogo:hover{
+  transform: scale(1.2);
+  color: #DFD420;
+}
+
+/* CURSOR ENCIMA DEL LOGO Y JUSTIFICACION */
+.header .logo{
+  cursor: pointer;
+  margin-right: auto;
+}
+/* ANIMACION DE IMAGEN DEL LOGO  */
+.header .logo img:hover{
+  transform: scale(1.1);
+}
+
+
+/* LISTA DE LAS PARTES DE LA PAGINA */
+.header .nav-links li{
+  display: inline-block;
+  padding: 0 8px;
+
+}
+/* ANIMACION DE ESTA LISTA */
+.header .nav-links li:hover{
+  transform: scale(1.1);
+}
+
+/* CARACTERISTICAS DE ESTA LISTA*/
+.header .nav-links a{
+  font-size: 700;
+  color: dimgray;
+  text-decoration: none;
+}
+ 
+.header .nav-links a:hover{
+  color: #DFD420;
+}
+/* BOTON DE CONTACTANOS */
+.header .btn button{
+  margin-left: 20px;
+  font-weight: 700;
+  color: black;
+  padding: 9px 25px;
+  background: cornsilk;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+
+}
+/* ANIMACION DEL BOTON DE CONTACTANOS */
+.header .btn button:hover{
+ background-color: black;
+ color: #DFD420;
+ transform: scale(1.1);
+}
+/* COLOR DEL FONDO DEL BODY*/
+body{
+  background-color: rgb(32, 32, 32)
+}
+
+
+/* AQUI EMPIEZA EL HOME ---------------------------------------------------------------------------------------------*/
+/* ESPACIO ENTRE ENCABEZADO Y BORDES*/
+.home-container {
+  padding: 2rem;
+}
+/* CARACTERISTICAS DEL TITULO BIENVENIDOS A OLYMPIC GYM*/
+.slider h1 {
+  font-family: 'Barriecito', cursive;
+  font-size: 60px;
+  width: 900px;
+  padding: 30px;
+  text-align: center;
+  color: #DFD420;
+  align-items: center;
+  position: absolute;
+}
+
+.slider P {
+  font-size: 30px;
+  width: 900px;
+  padding: 200px;
+  text-align: center;
+  color:white;
+  align-items: center;
+  position: absolute;
+}
+/* CARACTERISTICAS DE LAS IMAGENES*/
+.slider {
+  display: flex;
+  aspect-ratio: 16/9; /* FORMATO DE LAS IMAGENES 16/9*/
+  overflow-x: hidden;  /* QUITA LA BARRA DE NAVEGACION*/
+  scroll-snap-type: x mandatory;  /* No quedan 2 imagenes en una */
+  scroll-behavior: smooth; /* breve transicion entre cambio de imagenes*/
+  border-radius: 0.25rem; /* RADIO DEL BORDE */
+  
+}
+
+.slider-wrapper {
+  position:relative;
+  max-width: 48rem; 
+  margin: auto;
+}
+
+/* IMAGENES NO BORROSAS Y CON OPACIDAD */
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+  opacity: 0.3;
+  
+}
+/* NAVEGADOR OSEA LOS 3 PUNTOS */
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 0.15rem;
+  left: 50%;
+  z-index: 1;
+}
+/* CONFIGURACION DE LOS 3 PUNTOS*/
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color:#2c2c2b;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.entrenadores {
+  position: relative;
+  width: 300px;
+  height: 350px;
+ margin: 20px;
+ display: inline-block;
+ margin-right: 50px;
+ margin-left: 70px;
+}
+
+.entrenadores .e1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: .5s;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.entrenadores .e1 .frente {
+  transform: perspective(600px) rotate(0deg);
+  box-shadow: 0 5px 10px #000000;
+}
+
+.entrenadores .frente img {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.entrenadores .frente h3 {
+  width: 100%;
+  bottom: 0;
+  height: 45px;
+  line-height: 45px;
+  color: #DFD420;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.entrenadores .detras {
+  transform: perspective(600px) rotateY(180deg); 
+  background: #1f1f1d;
+  padding: 15px;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px #000;
+}
+
+.entrenadores .detras .link {
+border-top: solid 1px aliceblue;
+height: 90px;
+line-height: 50px;
+}
+.entrenadores .detras .link .redes-testi a {
+  color: aliceblue;
+    display: inline-block;
+    text-decoration: none;
+    width: 35px;
+    height: 15px;
+    padding: 3px;
+    line-height: 15px;
+    color:aliceblue;
+    margin-right: 10px;
+    background-color:#1f1f1d;
+    text-align: center;
+    transition: all 300ms ease;
+    border-radius: 0px;
+    justify-content: center;
+   margin-left: 0px;
+   justify-content: center;
+  }
+
+
+.entrenadores .detras h3{
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.entrenadores:hover .frente {
+  transform: perspective(600px) RotateY(180deg);
+}
+.entrenadores:hover .detras {
+  transform: perspective(600px) RotateY(360deg);
+}
+
+/* AQUI EMPIEZA LA SECCION DE PLANES -------------------------------------------------------------------------------------------------------- */
+/* CONFIGURACION DE LA CAJA DE PLANES */
+.box-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+/* CONFIGURACION DE CADA CUADRO DE PLANES  */
+.box-container .box {
+  background-color: #2c2c2b;
+  width: 330px;
+  height: 430px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+/* ANIMACION DE CADA CUADRO DE PLAN */
+.box-container .box:hover {
+  transform: translate(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2)
+}
+/* TAMAÑO DE LA IMAGEN DEL CUADRO DE PLAN  */
+.box-container .box img{
+  width: 330px;
+  height: 220px;
+}
+/* CARACTERISTICAS DEL TEXTO  */
+.box-container .box p{
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* TITULO "NUESTROS PLANES" */
+
+.tituloplanes {
+  color: #DFD420;
+  text-align: center;
+font-family: 'Roboto Slab', serif;
+font-size: 40px;
+}
+/* CONFIGURACION DEL BOTON DE ADQUIRIR */
+.box-container .btn button{
+  margin-left: auto;
+  margin-top: 30px;
+  font-weight: 700;
+  color: black;
+  padding: 9px 25px;
+  background: cornsilk;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+
+}
+/* ANIMACION DEL CUADRO DE ADQUIRIR */
+
+.box-container .btn button:hover{
+ background-color: black;
+ color: #DFD420;
+
+ transform: scale(1.1);
+}
+/* AQUI EMPIEZAN LOS TESTIMONIOS ----------------------------------------------------------------------------- */
+.testimonios-conta {
+  width: 900px;
+  height: 250px;
+  background-color: #2c2c2b;
+  border-radius: 10px;
+  display: flex;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.imgtest-conta {
+  width: 40%;
+}
+
+.imgtest-conta img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 0px 5px;
+}
+
+.texttest-conta {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15px;
+}
+
+.texttest-conta h2 {
+  font-family: 'Caveat', cursive;
+  color: #DFD420;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.texttest-conta .descripcion {
+ font-size: 20px;
+ margin-bottom: 5px;
+ text-align: center;
+}
+
+.texttest-conta .biografia {
+  font-size: 15px;
+  color: aliceblue;
+  text-align: center;
+ }
+
+.testimonios-conta .redes-testi a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color:aliceblue;
+  margin-right: 10px;
+  background-color:#1f1f1d;
+  text-align: center;
+  transition: all 300ms ease;
+  border-radius: 10px;
+  justify-content: center;
+ margin-left: 55px;
+}
+
+.testimonios-conta .redes-testi p {
+text-align:start;
+justify-content: center;
+font-size: 16px;
+color: #DFD420;
+}
+
+
+
+/* AQUI EMPIEZA LA SECCION DE PIE DE PAGINA ----------------........................................------------------------------------------ */
+
+/* BOX INICIAL */
+.pie-pagina {
+  width: 100%;
+  background-color: #2c2c2b;
+}
+/* CONFIGURACION DEL BOX - TAMAÑO, MARGENES, ANCHO */
+.pie-pagina .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 30px 5px;
+}
+/* ALINEACION DEL LOGO, CENTRADO */
+.pie-pagina .grupo-1 .box-pie figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* TAMAÑO DEL LOGO */
+.pie-pagina .grupo-1 .box-pie figure img {
+  width: 250px;
+}
+/* COLOR DE LOS TITULOS Y CARACTERISTICAS COMO TAMAÑO Y ESPACIO  */
+.pie-pagina .grupo-1 .box-pie h2 {
+  color: #DFD420;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+/* CARACTERISTICAS DE LOS PARRAFOS COLOR Y ESPACIADO */
+.pie-pagina .grupo-1 .box-pie p {
+  color: dimgray;
+  margin-bottom: 10px;
+} 
+/* REDES SOCIALES CARACTERISTICAS  */
+.pie-pagina .grupo-1 .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: aliceblue;
+  margin-right: 10px;
+  background-color: black;
+  text-align: center;
+  transition: all 300ms ease;
+}
+/* ANIMACION AL PASAR EL CURSOR POR LAS REDES SOCIALES  */
+.pie-pagina .grupo-1 .red-social a:hover {
+  color: #DFD420;
+}
+/* CARACTERISTICAS DEL BOX DE TODOS LOS DERECHOS RESERVADOS   */
+.grupo-2 {
+  background-color: rgb(22, 21, 21);
+  padding: 10px 500px;
+  text-align: center;
+  color: aliceblue;
+}
+/* TEXTO EN PEQUEÑO  */
+ .grupo-2 small {
+  font-size: 15px;
+  width: 20%;
+  background-color: #1f1f1d;
+}
+

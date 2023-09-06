@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2? family= Nunito:wght@800 & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Roboto+Slab:wght@500&display=swap');
+
+
+
+:root {
+  --black: #030102;
+  --grey: #37393b;
+  --grey2: #e2e6ee;
+  --primary: #DFD420;
+  --white: #ffffff;
+  --text1regular: 400 1rem/normal Roboto;
+  --heading1: 700 1.25rem/normal Roboto;
+  --text2regular: 300 0.75rem/normal Roboto;
+}
+
+.box-info {
+  background-color: aliceblue;
+  height: 500px;
+  width: 2000px;
+  box-shadow: 0px 4px 18px rgba(158, 168, 189, 0.31);
+  border-radius: 10px;
+  margin: 100px;
+  max-width: 1200px;
+ justify-content: left;
+  
+}
+
+.box-info h1 {
+  color:#DFD420;
+  text-align: center;
+font-family: 'Roboto Slab', serif;
+font-size: 40px;
+}
+.box-info h2 {
+  color: #252524;
+  text-align: center;
+font-family: 'Roboto Slab', serif;
+font-size: 40px;
+}
+
+.box-info p {
+  font-size: 20px;
+  text-align:left
+}
+
+
+
+body{
+  background: #2c2c2b;
+  height: 120vh;
+  color: var(--black);
+  font: var(--heading1);
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  margin:0;
+  font-family: var(--text1regular);
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+input {
+  border: 1px solid var(--grey2);
+  box-shadow: 0px 4px 18px rgba(158, 168, 189, 0.31);
+  border-radius: 10px;
+  padding-block: 10px;
+
+}
+
+.pay-form {
+  background-color: var(--white);
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0px 4px 20px rgba(77, 166, 186, 0.38);
+  border-radius: 20px;
+}
+
+.name-form {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom:4px;
+}
+
+.form-pago {
+  display:flex;
+  flex-direction: column;
+  gap:24px;
+
+}
+
+.date-tarjeta {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+h1 {
+  font-size: var(--heading1);
+}
+
+.nombre {
+  display: flex;
+  flex-direction: column;
+}
+
+.numero-tarjeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.direccion-tarjeta{
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius:10px ;
+  padding-block:12px ;
+  padding-inline: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
